@@ -1,0 +1,10 @@
+[tools]
+prettier = "3.9.6"
+
+[tasks.check]
+depends = ["check:*"]
+
+[tasks."check:format-prettier"]
+run = """
+prettier --cache --check './**/*.{yml,yaml,md}'
+"""
